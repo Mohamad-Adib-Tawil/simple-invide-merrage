@@ -144,9 +144,11 @@ function renderRsvp() {
   const enabled = config.rsvp.enabled && /^\d{7,15}$/.test(config.rsvp.whatsappNumber);
   $('#rsvp-section').hidden = !enabled;
   if (!enabled) return;
+  const whatsappUrl = `https://wa.me/${config.rsvp.whatsappNumber}`;
   const message = config.rsvp.messageTemplate || `السلام عليكم، أود تأكيد حضوري حفل زفاف ${config.groomArabic} و${config.brideArabic}.`;
   $('#rsvp-copy').textContent = config.rsvp.deadline ? `يرجى تأكيد الحضور قبل ${config.rsvp.deadline}.` : 'يسعدنا تأكيد حضوركم عبر واتساب.';
-  $('#rsvp-link').href = `https://wa.me/${config.rsvp.whatsappNumber}?text=${encodeURIComponent(message)}`;
+  $('#rsvp-link').href = `${whatsappUrl}?text=${encodeURIComponent(message)}`;
+  $('#order-link').href = whatsappUrl;
 }
 
 function escapeIcs(value = '') {

@@ -21,9 +21,9 @@ export const weddingConfig = Object.freeze({
   guestInstructions: '',
   childrenInvited: null,
   rsvp: {
-    enabled: false,
+    enabled: true,
     contactName: '',
-    whatsappNumber: '', // International digits only, without +
+    whatsappNumber: '963992688759', // International digits only, without +
     deadline: '',
     companionsAllowed: null,
     requestAttendeeCount: false,

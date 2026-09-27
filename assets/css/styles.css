@@ -261,6 +261,8 @@
   .site-footer__names { font: 400 1.8rem var(--font-calligraphy); }
   .site-footer__join { color: #e0c397; }
   .site-footer__rule { display: block; width: 37px; height: 1px; margin: 14px auto; background: #dec499; }
+  .site-footer__order { display: inline-flex; align-items: center; min-height: 42px; margin-top: 21px; padding: 8px 17px; border: 1px solid #dec499; border-radius: 100px; color: #fff8e9; text-decoration: none; }
+  .site-footer__order:hover { color: #fff; background: rgba(255, 255, 255, .12); }
   .toast {
     position: fixed; z-index: 70; right: 50%; bottom: calc(var(--safe-bottom) + 20px);
     width: max-content; max-width: calc(100vw - 32px); padding: 10px 18px;
